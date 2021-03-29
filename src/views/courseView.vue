@@ -12,7 +12,6 @@
         </div>
         <div class="course_program">
             <div class="program_header"><h1>Programa de estudios</h1></div>
-            <hr>
             <ul class="program_list" v-for="item in courseData.included" :key="item.attributes.id">
                 <li class="program_item">{{item.attributes.name}}</li>
             </ul>
@@ -63,8 +62,22 @@ export default {
     display: flex;
     position: relative;
     padding: 48px;
-    color: #EEE;
     min-height: 250px;
+}
+
+.course_header h1{
+    color: #222222;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.course_header p{
+    background-color: #e48900;
+    color: #ddd;
+    display: inline-block;
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 4px;
 }
 
 .course_header img{
@@ -81,7 +94,7 @@ export default {
     content: '';
     height: 100%;
     width: 100%;
-    background-color: #0000009F;
+    background-color: #FFFFFF5F;
     position: absolute;
     top:0;
     left: 0;
@@ -96,7 +109,8 @@ export default {
 
 .section_helper{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-auto-rows: 1fr;
 }
 
@@ -106,12 +120,14 @@ export default {
 
 .course_program{
     padding: 48px;
-    background: #111;
-    color: #ddd;
+    background: #f6f6f6;
+    color: #424642;
 }
 
 .program_header{
-    margin-bottom: 32px;
+    padding-bottom: 32px;
+    color: #e48900;
+    border-bottom: 1px solid #ddd;
 }
 
 .program_list{
@@ -120,7 +136,7 @@ export default {
 
 .program_item{
     padding: 32px 0;
-    border-bottom: 1px solid #1c1c1c;
+    border-bottom: 1px solid #ddd;
 }
 
 </style>
