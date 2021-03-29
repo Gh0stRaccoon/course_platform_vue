@@ -110,7 +110,7 @@ export default {
 .section_helper{
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-auto-rows: 1fr;
 }
 

@@ -10,6 +10,7 @@ export default new Vuex.Store({
     loaded: false,
   },
   mutations: {
+    // getting data and structuring object to call it in the component
     async getUserData(){
       this.state.loaded = false
       const data = await getUser();

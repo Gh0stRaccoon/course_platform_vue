@@ -132,8 +132,12 @@ export default {
   cursor: pointer;
 }
 
-.course:hover, .selected{
+.course:hover{
   background-color: #ffffff9f;
+}
+
+.selected{
+  background-color: #ffffffBF;
 }
 
 .course img{

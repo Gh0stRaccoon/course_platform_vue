@@ -59,9 +59,10 @@ button:focus{
 #nav a.router-link-exact-active {
   color: #e48900;
 }
-
+/* global styles for description in v-html directive */
 .course_description p, .course_description ul, .course_description pre{
     margin-bottom: 12px;
+    white-space: pre-wrap;
 }
 
 .course_description code{
@@ -75,8 +76,7 @@ button:focus{
 }
 
 
-
-
+/* dotted background */
 .area{
     /* background: #ffffff; */
     background: linear-gradient(to bottom, #ffffff, #f0f0f0);
