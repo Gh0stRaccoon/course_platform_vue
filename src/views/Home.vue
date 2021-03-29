@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <user-info :usrinfo="user" v-if="loaded"/>
+    <loader class="loader" v-else/>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import {mapMutations, mapState} from "vuex";
+import Loader from '../components/loader.vue';
+import UserInfo from '../components/UserInfo.vue';
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    UserInfo,
+    Loader,
+  },
+  methods: {
+    ...mapMutations(['getUserData'])
+  },
+  computed: {
+    ...mapState(['user', 'loaded'])
+  },
+  async created() {
+    await this.getUserData()
+  },
+};
 </script>
+<style scoped>
+.loader{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+</style>
