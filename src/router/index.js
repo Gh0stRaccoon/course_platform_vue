@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import error from "../views/error.vue"
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,11 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "course" */ "../views/courseView.vue"),
 	},
+	{
+		path: "*",
+		name: 'error',
+		component: error,
+	}
 ];
 
 const router = new VueRouter({

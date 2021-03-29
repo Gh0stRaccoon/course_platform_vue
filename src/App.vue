@@ -63,6 +63,7 @@ button:focus{
 .course_description p, .course_description ul, .course_description pre{
     margin-bottom: 12px;
     white-space: pre-wrap;
+    text-align: justify;
 }
 
 .course_description code{
