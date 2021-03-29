@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="course_container container">
-        <div @click="getSelected(course)" class="course" v-for="course in usrinfo.courses" :key="course.attributes.name">
+        <div @click="getSelected(course)" class="course" :class="selected && selected.attributes.name == course.attributes.name && 'selected'" v-for="course in usrinfo.courses" :key="course.attributes.name">
           <img :src="course.attributes.cover" :alt="`course ${course.attributes.name}`">
           <h3>{{ course.attributes.name }}</h3>
           <button>Detalles</button>
@@ -132,8 +132,8 @@ export default {
   cursor: pointer;
 }
 
-.course:hover{
-  background-color: #fafafa;
+.course:hover, .selected{
+  background-color: #ffffff9f;
 }
 
 .course img{

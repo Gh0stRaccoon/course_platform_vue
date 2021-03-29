@@ -79,7 +79,7 @@ button:focus{
 
 .area{
     /* background: #ffffff; */
-    background: linear-gradient(to bottom, #ffffff, #e4e4e4);
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
     width: 100%;
     height:100vh;
     z-index: -1;

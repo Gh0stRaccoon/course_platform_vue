@@ -72,8 +72,8 @@ export default {
 }
 
 .course_header p{
-    background-color: #e48900;
-    color: #ddd;
+    background-color: #ff7a00;
+    color: #FFF;
     display: inline-block;
     padding: 8px;
     margin-top: 8px;
@@ -116,6 +116,7 @@ export default {
 
 .course_description{
     padding: 48px;
+    background-color: #ffffffa0;
 }
 
 .course_program{
@@ -126,7 +127,7 @@ export default {
 
 .program_header{
     padding-bottom: 32px;
-    color: #e48900;
+    color: #ff7a00;
     border-bottom: 1px solid #ddd;
 }
 
