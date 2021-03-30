@@ -10,8 +10,6 @@
           <a class="social_network" :class="social.attributes.name"
             v-for="social in usrinfo.social" :key="social.attributes.name" 
             :href="social.attributes.url" target="_blank"/>
-            <!-- <div :class="social.attributes.name"></div> -->
-
         </div>
       </div>
       <div class="course_container container">
@@ -63,7 +61,6 @@ export default {
 .section_user{
   width: 600px;
 }
-
 .container{
   padding: 0 40px;
 }
